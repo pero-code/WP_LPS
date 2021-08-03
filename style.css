@@ -1,0 +1,247 @@
+/*
+Theme name: LPS tema
+Author: Webcon team
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+:root {
+    --white: #fff;
+    --black: #000;
+    --fontSize: 17px;
+    --transition: .5s ease;
+    --tamnoZelena: #055106;
+    --svetloZelena:#1fab40;
+    --zelenaTamna:#285d29;
+}
+
+/*************************
+Basic styles
+*************************/
+body{
+  font-family: 'Bitter', serif!important;
+  font-weight: 500!important;
+  font-size: var(--fontSize)!important;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Work Sans', sans-serif;
+  color: var(--tamnoZelena);
+}
+
+h2{
+  font-size: 2.5rem!important;
+}
+
+hr{
+  width: 20%;
+  border: none;
+  height: 3px!important;
+  background: var(--tamnoZelena)!important;
+  opacity: 1!important;
+}
+
+.button{
+  margin-top: 10px;
+  display: inline-block;
+  background: var(--tamnoZelena);
+  color: var(--white);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover{
+  background: var(--svetloZelena);
+  color: var(--black);
+  transition: var(--transition);
+}
+
+/**********************
+navBar
+***********************/
+nav{
+  background:rgba(255,255,255, .8);
+}
+
+nav img{
+  width: 17%;
+}
+
+nav .nav-link{
+  color: var(--tamnoZelena)!important;
+  margin-right: 20px;
+}
+
+nav .active a{
+  color: var(--white)!important;
+  background: var(--tamnoZelena);
+  padding: 10px 20px!important;
+  border-radius: 3px;
+}
+
+nav .nav-link:hover{
+  text-decoration: underline;
+}
+
+/**********************
+header
+***********************/
+header{
+  height: 100vh;
+  background: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1)) ,url(img/lps-header.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+header .outsideDiv{
+  margin: 0 50px;
+  border:5px solid var(--white)
+}
+
+header .insideDiv{
+  height: 30vh;
+  background: rgba(255,255,255, .8);
+  margin: 15px;
+  padding: 0 50px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header h1{
+  color: var(--svetloZelena);
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px var(--black);
+}
+
+
+/**********************
+oRazlicitosti
+***********************/
+.oRazlicitosti img{
+  width: 70%;
+}
+
+/**********************
+blog
+***********************/
+.blog img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog .blogPostovi{
+  flex-wrap: wrap;
+}
+
+.blog .blogPostovi article{
+  width: 32%;
+  margin-bottom: 25px;
+}
+
+.blog .blogPostovi article .featured-image{
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.blog .blogPostovi article .datum{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background:rgba(255,255,255, .9);
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+/*****************
+single.php
+***************/
+.singlePost .post article{
+  width: 80%;
+  margin: 50px auto;
+}
+
+/******************
+page.php
+*****************/
+.pageTemplate article{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/**********************
+brojevi
+***********************/
+.brojevi i{
+  font-size: 3rem;
+}
+
+/**********************
+footer
+***********************/
+footer{
+  background: var(--svetloZelena);
+}
+
+
+/**********************
+RESPONSIVE
+***********************/
+@media (max-width:770px) {
+  .navbar-brand{
+    width: 50%;
+  }
+
+  nav img{
+    width: 35%;
+  }
+
+  header .outsideDiv{
+    margin: 0 10px;
+    /* border:5px solid var(--white) */
+  }
+  
+  header .insideDiv{
+    height: 50vh;
+    margin: 10px;
+    padding: 0 10px;
+  }
+  
+  header h1{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  header h4{
+    text-align: center;
+  }
+
+  .oRazlicitosti .col-md-6:nth-child(3){
+    order: 4;
+  }
+
+  .oRazlicitosti .col-md-6:nth-child(1){
+    margin-bottom: 25px;
+  }
+
+  .blog .blogPostovi{
+    flex-wrap: wrap;
+  }
+
+  .blog .blogPostovi article{
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .brojevi .col-md-4{
+    margin-bottom: 25px;
+  }
+
+}
